@@ -1,0 +1,10 @@
+pages:
+  script:
+    - echo "Deploying to GitLab Pages..."
+    - mkdir -p public
+    - cp -r * public/  # Copy all files to the 'public' directory
+  artifacts:
+    paths:
+      - public
+  only:
+    - main  # Or master, or whatever branch you want to deploy from
